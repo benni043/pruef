@@ -1,0 +1,6 @@
+<app-create-animal></app-create-animal>
+
+<div *ngFor="let animal of animalService.animals">
+  <app-list-animal [animal]="animal"></app-list-animal>
+  <br>
+</div>
