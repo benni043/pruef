@@ -28,9 +28,10 @@ export class AnimalService {
     }
 
     async find(id: number): Promise<Animal> {
-        if (await this.animalStore.find(id) == undefined) throw new Error("invalid");
+        let animal = await  this.animalStore.find(id);
+        if (await animal == undefined) throw new Error("invalid");
 
-        return await this.animalStore.find(id);
+        return animal;
     }
 
     async create(animal: Animal): Promise<number> {

@@ -14,7 +14,7 @@ export class AnimalServiceService {
           this.animals = res;
           console.log(res)
         },
-        error: () => {
+        error: err => {
           alert("Konnte keine Tiere finden!")
         }
       }
